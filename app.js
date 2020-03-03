@@ -12,7 +12,7 @@ class userInterface {
 		const listaProductos = document.getElementById ("list-product");
 		const elemento = document.createElement("div");
 		elemento.innerHTML = `
-			<div class="item">
+			<div class="item" id="onedos">
 			
 				<img src="images/icon01.png">
 			
@@ -29,24 +29,46 @@ class userInterface {
 						<h5 class="product-price-input">${producto.price}</h5>
 						<h5 class="product-price-input">${producto.year}</h5>
 					</div>
+
+					<div class="delete-icon">
+
+					</div>
 				</div>
 			
 			</div>
 			`;
 
-		// const nombreUno = document.getElementById("productName01").innerHTML = producto.name;
+			const items = document.getElementsByClassName("item").length;
+			const boxOne = document.getElementById("container-big");
+			const  elementoDos = document.createElement("div");
+			elementoDos.innerHTML = `
+			<div id="container-2-alert" name="Eliminar	">
+					<div class="container-2-mainUno">
+						<h4>TOTAL PRODUCTOS :</h4>
+					</div>
 
-
+					<div class="container-2-mainDos">
+						<h4 id="itemsFrame">${items + 1}</h4>
+					</div>
+			</div>
+			`
+		boxOne.appendChild(elementoDos);
 		listaProductos.appendChild(elemento);
 	}
 
 	resetForm (){
 		document.getElementById("form-product").reset();
 	}
+	
+	deleteNum(elementoDos) {
+		const boxes = document.getElementsByClassName("item").length;
+		console.log(boxes);
+		if (boxes >= 2 ) {
+			const r = document.getElementById("container-big");
+			r.removeChild(r.childNodes[1]);	
+		}
+	}
 }
-
-
-
 
 // DOM EVENT
 
@@ -61,15 +83,34 @@ document.getElementById("form-product")
 
 		const interfaz = new  userInterface ();
 
+		// SAVE
 		interfaz.addProduct(producto);
 		interfaz.resetForm();
 
-		e.preventDefault();
+		// SHIT
+		const divs = document.getElementsByClassName("item").length;
+		if (divs === 1) {
+			console.log("Hay " + divs + " Item");
+		} else {
+			console.log("Hay " + divs + " Items");
+		}
 
+
+		interfaz.deleteNum();
+
+		e.preventDefault();
 	} );
 
 
-document.getElementById("list-product")
+document.getElementById("container-big")
 	.addEventListener("click", function(e) {
-		console.log(e.target);
-	})
+		// console.log(e.target);
+		})
+
+$(".item").mouseover(function(){$(".delete-icon").visible()});
+const y = document.getElementsByClassName("item");
+const n = document.getElementsByClassName("delete.icon");
+	y.onmouseover = function () {
+		n.style.visibility="visible"
+
+	}

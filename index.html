@@ -27,24 +27,24 @@
 	<div id="container">
 		<div id="card">
 			<div class="card-header">
-				<h2>ADD A PRODUCT</h2>
+				<h2>AGREGA UN PRODUCTO</h2>
 			</div>
 
 			<div class="card-main">
 
 				<form id="form-product">
 					<div class="form-input">
-						<input type="text" id="name-product"  placeholder="Product Name">
+						<input type="text" id="name-product"  placeholder="Product Name" required autocomplete="off">
 					</div>
 
 					<div class="form-input">
-						<input type="number" id="price-product" placeholder="Product Price" step="0.01">
+						<input type="number" id="price-product" placeholder="Product Price" step="0.01"  required>
 					</div>
 
 					<div class="form-input">
-						<input type="number" id="year-product" placeholder="Product Year" min="1900" max="2020">
+						<input type="number" id="year-product" placeholder="Product Year" min="1900" max="2020" required>
 					</div>
-					<input type="submit" name="" value="SAVE" class="input-save">
+					<input type="submit" name="" value="REGISTRAR" class="input-save">
 				</form>
 			</div>
 		</div>
@@ -55,6 +55,16 @@
 
 	</div>
 
+	<div id="container-2">
+		<div id="container-2-bg-1">
+			<div id="container-big">
+				
+			</div>
+		</div>
+
+		
+	</div>
+
 		<!-- FOOTER -->
 		<footer>
 			<div id="footer-pc-1">
@@ -62,11 +72,12 @@
 			</div>
 
 			<div id="footer-pc-2">
-				<p>Copyright y Derechos de Autor por Daniel Plata García</p>
+				<p>Copyright © 2020 - Página Creada y Desarrollada por Daniel Plata García - Todos los Derechos son Reservados</p>
 			</div>
 
 		</footer>
 
+	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>

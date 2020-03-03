@@ -47,14 +47,20 @@ nav h3 {
 	background: 	#004d40;
 	height: 300px;
 	width: 100%;
+	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 }
+
+/*CONTAINER 1*/
 
 #container {
 	display: flex;
 	margin-top: 0px;
-	height: 500px;
+	height: 600px;
 	width: 100%;
 	padding-top: 80px;	
+	background: ;
 }
 
 #card {
@@ -65,6 +71,7 @@ nav h3 {
 	margin-top: -300px;
 	border: 0px;
 	border-radius: 10px;
+	border-bottom: none;
 	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
@@ -135,6 +142,7 @@ nav h3 {
 			transition: 0.3s;
 			font-family: 'Fira Sans Condensed', sans-serif; 
 			font-size: 15px;
+			
 		}
 
 			.input-save:hover {
@@ -230,7 +238,82 @@ nav h3 {
 	color: #ffd180;
 }
 
+.delete-icon {
+	background: red;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	margin-top: 90px;
+	margin-left: 75px;
+	border-radius: 3px;
+	visibility: hidden;
+}
 
+/*CONTAINER 2*/
+
+#container-2 {
+	background: ;
+	width: 100%;
+	margin-top: -500px ;
+}
+
+	#container-2-bg-1 {
+		background: ;
+		height: 400px;
+		width: 40%;
+		padding-top: 40px;
+	}
+
+	#container-big {
+		background: ;
+		width: 340px;
+		height: 360px;
+		margin-left: 100px;
+	}
+
+	#container-2-alert {
+		background: #24242a;
+		height: 50px;
+		width: 100%;
+		border: 0px;
+		border-radius: 10px;
+		border-bottom: none;
+		-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+		display: flex;
+	}
+		.container-2-mainUno {
+			background: ;
+			height: 100%;
+			width: 50%;
+			}
+			.container-2-mainUno h4 {
+				color: white;
+				background: ;
+				width: 170px;
+				margin-left: 40px;
+				margin-top: 17px;
+			}
+
+		.container-2-mainDos {
+			background: ;
+			height: 100%;
+			width: 50%;
+			text-align: center;
+		}
+
+			.container-2-mainDos h4 {
+			color: orange;
+			margin-top: 17px;
+			padding-left: 0px;
+			}
+
+	#container-2-main-2 {
+		background: ;
+		height: 100px;
+		width: 25%;
+	}
 
 	/*FOOTER--------------------------------------------------------------------*/
 
@@ -238,18 +321,23 @@ footer {
 	height: 300px;
 	width: 100%;
 	background: black;
-	margin-top: 100px;
 }
 
 #footer-pc-1 {
 	height: 80%;
-	background: #009688;
+	background: #004D40;
 	margin-bottom: 0px;
+			-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 }
 
 #footer-pc-2 {
 	height: 20%;
-	background: #004d40;
+	background: #24242A;
+			-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 }
 
 	#footer-pc-2 p {
@@ -257,4 +345,5 @@ footer {
 		text-align: center;
 		padding-top: 20px;
 		font-size: 14px;
+		color: white;
 	}
