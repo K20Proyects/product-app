@@ -44,7 +44,7 @@ nav h3 {
 	/*MAIN------------------------------------------------------------------------------*/
 
 #pre-container {
-	background: 	#004d40;
+	background: #004d40;
 	height: 300px;
 	width: 100%;
 	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
@@ -66,24 +66,25 @@ nav h3 {
 #card {
 	background: #e0e0e0;
 	height: 400px;
-	width: 25%;
-	margin-left: 100px;
+	width: 350px;
+	margin: auto;	
 	margin-top: -300px;
 	border: 0px;
 	border-radius: 10px;
 	border-bottom: none;
 	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);	
 }
 
 	.card-header {
 		margin-top: 0px;	
 		text-align: center;
-		padding-top: 11px;
-/*		background: blue;
-*/		border: 0px solid black;
+		padding-top: 11px;	
+		border: 0px solid black;
 		border-radius: 10px;
+		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 0px;
 		height: 20%;
 		width: 100%;
 		background: #24242a;
@@ -98,27 +99,30 @@ nav h3 {
 		height: 80%;
 		display: flex;
 		width: 100%;
+		padding-top: 30px;
 	}
 
 	#form-product {
 		width: 100%;
 		display: block;
+		background: ;
 	}
 
 		.form-input {
 			height: 50px;
 			width: 100%;
-			margin-top: 10px; 
-			background: ;	
+			margin-top: 10px;
+		    	
+			background: ;
 			display: block;
 		}
 
 		.form-input input {
-			margin-top: 30px;
-			height: 	35px;
-			width: 75%;
-			margin-left: 9%;
-			border: 0px ;
+			display: block;	
+			height: 35px;
+			width: 80%;
+			margin: auto;		
+			border: 1px ;
 			border-radius: 2px;	
 			padding-left: 10px;
 			padding-right: 10px;
@@ -130,19 +134,20 @@ nav h3 {
 		.input-save {
 			margin-left: ;
 			display: block;
-			background: ;
-			margin-top: 50px;
+			margin: auto;	
+			margin-top: 20px;
 			width: 81%;
 			height: 35px;
-			margin-left: 9%;
 			background: #009688;
 			color: black;
-			border: 0px;
-			border-radius: 10px;
+			border: 1px;
+			border-radius: 2px;
 			transition: 0.3s;
 			font-family: 'Fira Sans Condensed', sans-serif; 
 			font-size: 15px;
-			
+			-webkit-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
+			box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.75);
 		}
 
 			.input-save:hover {
@@ -156,13 +161,19 @@ nav h3 {
 			padding-left: 10px;
 		}
 			/*LIST PRODUCT-------------------------------------------------*/
+#pre-container3 {
+width: 60%;
+height: 100%;
+}
+
 
 #list-product {
 	background: #e0e0e0;
 	height: 800px;
-	width: 60%;
-	margin-left: 4%;
+	width: 95%;
+	margin: auto;
 	margin-top: -300px;
+	margin-left: 0px;
 	display: flex;
 	border-radius: 5px;	
 	flex-wrap: wrap;
@@ -170,6 +181,14 @@ nav h3 {
 	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+}
+
+#empty-list {
+font-style: italic;
+color: gray;
+display: block;
+margin: auto;
+text-align: center;
 }
 
 .item {
@@ -187,6 +206,7 @@ nav h3 {
 	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+	transition : 0.4s;
 }
 
 	.item img {
@@ -215,7 +235,10 @@ nav h3 {
 	.item-main-21 h5 {
 		color: white;
 		padding-left: 50px;
+		text-align : center;
 		font-family: 'Roboto', sans-serif;
+		font-size: 12px;
+		margin-top: 13px;
 	}
 
 .item-main-22 {
@@ -223,6 +246,12 @@ nav h3 {
 	height: 100%;
 	width: 50%;
 }
+	.item-main-22 h5 {
+	margin-top: 13px;
+	font-size: 12px;
+	text-align: center;
+	margin-left: -45px;	
+	}
 
 .product-price-input:nth-child(1) { 
 	background: ;
@@ -239,36 +268,78 @@ nav h3 {
 }
 
 .delete-icon {
-	background: red;
-	height: 50px;
-	width: 50px;
-	position: absolute;
-	margin-top: 90px;
-	margin-left: 75px;
+	background: #ef5350;
+	height: 25px;
+	width: 25px;	
+	position: relative;
+	margin-top: -200px;
+	margin-left: -190px;	
+	cursor: pointer;
 	border-radius: 3px;
-	visibility: hidden;
+	transition: 0.3s;
+	opacity: 0.5;
 }
+	.delete-icon:hover {
+	background: #b71c1c;	
+	opacity: 1;
+	}
+
+.delete-icon img {
+	width: 11px;
+	height: 11px;
+	display: block;
+	margin: auto;
+	margin-top: 7px;
+	box-shadow: none;	
+	}	
+
+	.deleteDiv {
+	background: #b71c1c;
+	padding-top: 3px;
+	height: 30px;
+	width: 200px;	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-top: 110px;
+	margin-left: -200px;
+	position: relative;
+	transition: 0.4s;
+	visibility: hidden;
+	cursor: pointer;	
+	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);	
+	}
+		.deleteDiv:hover {
+		background: red;
+		}		
+
+		.deleteDiv h5 {
+		color: white;
+		text-align: center;
+		font-style: bold;
+		margin-top: 5px;
+		}
 
 /*CONTAINER 2*/
+#pre-container2 {
+	width: 40%;
+	height: 100%;
+	background: ;
+}
 
 #container-2 {
 	background: ;
 	width: 100%;
-	margin-top: -500px ;
+	
+
 }
-
-	#container-2-bg-1 {
-		background: ;
-		height: 400px;
-		width: 40%;
-		padding-top: 40px;
-	}
-
 	#container-big {
 		background: ;
-		width: 340px;
-		height: 360px;
-		margin-left: 100px;
+		width: 350px;
+		height: 360px;	
+		margin: auto;
+		margin-top: 30px;
 	}
 
 	#container-2-alert {
