@@ -2,7 +2,7 @@ class productos {
 	constructor (name, price, year) {
 	this.name =name;
 	this.price = price;
-	this.year = year;
+	this.year = year;	
 	}
 }
 
@@ -23,9 +23,9 @@ class userInterface {
 			
 					<div class="item-main-21">
 						<h5>ID : </h5>
-						<h5>NAME : </h5>
-						<h5>PRICE : </h5>
-						<h5>YEAR : </h5>
+						<h5>NOMBRE: </h5>
+						<h5>PRECIO : </h5>
+						<h5>AÑO : </h5>
 					</div>
 
 					<div class="item-main-22">
@@ -39,12 +39,10 @@ class userInterface {
 					</div>
 
 					<div class="delete-icon" id='delete-icon' name="${t}">
-					<img src='images/deleteBtn.svg'>
-					</div>
+						<img src='images/deleteBtn.svg'>
+					</div>	
 
-				
-				</div>
-			
+				</div>			
 			</div>
 			`;
 	// TOTAL PRODUCTOS
@@ -90,6 +88,9 @@ document.getElementById("form-product")
 
 		const producto = new productos (name, price, year);
 		const interfaz = new  userInterface ();
+
+	// LOCAL STORAGE
+		window.localStorage.setItem('Nombre', JSON.stringify(producto));
 
 	// SAVE
 		interfaz.addProduct(producto);

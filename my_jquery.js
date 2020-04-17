@@ -1,15 +1,16 @@
 $(function(){
 
-//DOM ADD ITEM
+
 var t = 0;
+
+//DOM ADD ITEM
 document.getElementById('form-product')
 	.addEventListener('submit', function (e) {
-
+	
+	// ELIMINA EMPTY LIST STRING
 	$('#empty-list').remove();
 
 	// VAR T
-	const prueba = document.getElementsByClassName('item').length;
-	console.log(prueba);
 	t++;
 	console.log('var t = ' + t);	
 });
@@ -60,8 +61,8 @@ $("#list-product").on('click', '.delete-icon', function() {
 		clearTimeout(u);
 		const s = $(this);
 		u = setTimeout (function () {
-			$(this).siblings('.delete-icon').css('background-color', '');
-			$(this).siblings('.delete-icon').css('opacity', '');
+			$(s).siblings('.delete-icon').css('background-color', '');
+			$(s).siblings('.delete-icon').css('opacity', '');
 			$(s).css('border-bottom-left-radius', '10px');
 			$(s).css('border-bottom-right-radius', '10px');
 			$(s).css('visibility', 'hidden');
@@ -76,7 +77,7 @@ $("#list-product").on('click', '.delete-icon', function() {
 				$('.item').css('border-bottom-left-radius', '10px');  	
 				$('.item').css('border-bottom-right-radius', '10px');	
 			}, 3000);
-		}, 15000);
+		}, 10000);
 	});
 });
 
@@ -91,5 +92,6 @@ $('#list-product').on('click', '.deleteDiv', function() {
 	$('#itemsFrame').remove();
 	$('#container-2-mainDos').append("<h4 id='itemsFrame'>" + prueba2 + "</h4>");
 });
+
 
 }); //end
