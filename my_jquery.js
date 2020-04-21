@@ -1,18 +1,27 @@
 $(function(){
 
-
+// VAR T = # ITEMS  . BETTER THAN .length method
 var t = 0;
-
+var k = 0;
 //DOM ADD ITEM
 document.getElementById('form-product')
 	.addEventListener('submit', function (e) {
 	
 	// ELIMINA EMPTY LIST STRING
-	$('#empty-list').remove();
+	/*$('#empty-list').remove();*/
+	$('#empty-list').css('display', 'none');
 
 	// VAR T
 	t++;
 	console.log('var t = ' + t);	
+	
+	// FIX 'TOTAL PRODUCTS' BUG #1 = TOTAL PRODUCTS ADDS 2 DIVS WHEN USER DELETE ALL ITEMS AND ADD'S ONE MORE AFTER
+	k = $('.container-2-alert').length;
+	console.log('k es = ' + k);
+	const y = document.getElementById('container-big'); 
+	if (k >= 2) {
+		y.removeChild(y.childNodes[1]);	
+	}
 });
 
 var o = null;
@@ -82,16 +91,32 @@ $("#list-product").on('click', '.delete-icon', function() {
 });
 
 
-
 //DELETE BUTTON FUNCTION
 $('#list-product').on('click', '.deleteDiv', function() {
 	const prueba2 = document.getElementsByClassName('item').length - 1;
-
 	$(this);
 	$(this).parents('.item').remove();
 	$('#itemsFrame').remove();
+
+	// UPDATE 'TOTAL PRODUCTS' # ITEMS
 	$('#container-2-mainDos').append("<h4 id='itemsFrame'>" + prueba2 + "</h4>");
+	console.log('prueba2 = ' + prueba2);
+
+	// DELETE TOTAL PRODUCTS IF ITEMS = 0
+	// DELETE EMPTY LIST IF ITEM = 0
+	if (prueba2 === 0) {
+		$('#container-2-alert').remove();
+		$('#empty-list').css('display', '');
+	}
+
+   /* const k = $('#container-2-alert').length;*/
+	//console.log(k);
+	//if (k.length >= 2) {
+		//console.log('holi');
+	/*}*/
+
 });
 
 
-}); //end
+
+}); // END

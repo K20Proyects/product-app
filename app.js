@@ -50,7 +50,7 @@ class userInterface {
 		const boxOne = document.getElementById("container-big");
 		const  elementoDos = document.createElement("div");
 		elementoDos.innerHTML = `
-			<div id="container-2-alert" name="Eliminar	">
+			<div id="container-2-alert" name="Eliminar" class="container-2-alert">
 					<div class="container-2-mainUno">
 						<h4>TOTAL PRODUCTOS :</h4>
 					</div>
