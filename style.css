@@ -234,8 +234,8 @@ text-align: center;
 }
 	.item-main-21 h5 {
 		color: white;
-		padding-left: 50px;
-		text-align : center;
+		
+		text-align : right;
 		font-family: 'Roboto', sans-serif;
 		font-size: 12px;
 		margin-top: 13px;
@@ -247,25 +247,58 @@ text-align: center;
 	width: 50%;
 }
 	.item-main-22 h5 {
-	margin-top: 13px;
+	margin-top: 14px;
 	font-size: 12px;
-	text-align: center;
-	margin-left: -45px;	
+	text-align: center;	
 	}
 
+
 .product-price-input:nth-child(1) { 
-	background: ;
+	background: ;	
 	color: #ef6c00;
+	transition: 0.3s;
 }
 
 .product-price-input:nth-child(2) {
 	background: ;
-	color: #00c853;
+	margin: auto;
+	width: 70%;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+	color: #ffd180;
+	transition: 0.3s
 }
+	
 
 .product-price-input:nth-child(3) {
-	color: #ffd180;
+	color: #00c853;
+	margin: auto;
+	margin-top: 20px;
+	width: 70%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: ;
+	transition: 0.3s;
 }
+
+.product-price-input:nth-child(4) {	
+	margin: auto;
+	margin-top: 20px;
+	width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: ;
+	transition: 0.3s;
+	color: ;
+}
+
+.product-price-input:hover {
+		overflow: visible;
+		width: 91%;
+		border-radius: 3px;	
+		background: rgba(255, 255, 255, 0.3);
+		cursor: none;
+	}
 
 .delete-icon {
 	background: #ef5350;

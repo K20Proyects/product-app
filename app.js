@@ -23,7 +23,7 @@ class userInterface {
 			
 					<div class="item-main-21">
 						<h5>ID : </h5>
-						<h5>NOMBRE: </h5>
+						<h5>NOMBRE : </h5>
 						<h5>PRECIO : </h5>
 						<h5>AÑO : </h5>
 					</div>
@@ -31,7 +31,7 @@ class userInterface {
 					<div class="item-main-22">
 						<h5>${t}</h5>
 						<h5 class="product-price-input">${producto.name}</h5>
-						<h5 class="product-price-input">$${producto.price}</h5> <h5 class="product-price-input">${producto.year}</h5>
+						<h5 class="product-price-input">$ ${producto.price}</h5> <h5 class="product-price-input">${producto.year}</h5>
 					</div>
 
 					<div class='deleteDiv'>
