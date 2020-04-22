@@ -1,5 +1,5 @@
 $(function(){
-
+$("#tabs").tabs();
 // VAR T = # ITEMS  . BETTER THAN .length method
 var t = 0;
 var k = 0;
@@ -15,7 +15,7 @@ document.getElementById('form-product')
 	t++;
 	console.log('var t = ' + t);	
 	
-	// FIX 'TOTAL PRODUCTS' BUG #1 = TOTAL PRODUCTS ADDS 2 DIVS WHEN USER DELETE ALL ITEMS AND ADD'S ONE MORE AFTER
+	// FIX 'TOTAL PRODUCTS' BUG #1 = TOTAL PRODUCTS ADDS 2 DIVS WHEN USER DELETE ALL ITEMS AND THEN ADD'S ONE MORE
 	k = $('.container-2-alert').length;
 	console.log('k es = ' + k);
 	const y = document.getElementById('container-big'); 
@@ -117,6 +117,18 @@ $('#list-product').on('click', '.deleteDiv', function() {
 
 });
 
+// TABS
 
+	// TAB 1
+$('#homeBtn').on('click', function() {
+	$("#inventoryAdd").css('display', 'none');
+	$("#homeApp").css('display', 'block');
+});
+
+	// TAB 2
+$('#inventoryBtn').on('click', function() {
+	$("#inventoryAdd").css('display', 'block');
+	$("#homeApp").css('display', 'none');
+});
 
 }); // END

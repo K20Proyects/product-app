@@ -12,6 +12,8 @@ class userInterface {
 
 	 addProduct(producto) {
 		t++;
+		console.log(t);
+	
 		const listaProductos = document.getElementById ("list-product");
 		const elemento = document.createElement("div");
 		elemento.innerHTML = `
@@ -99,4 +101,18 @@ document.getElementById("form-product")
 		e.preventDefault();
 	});
 
+// JQUERY
+$(function () {
+
+$('#list-product').on('click', '.deleteDiv', function() {
+	const boxes = document.getElementsByClassName("item").length;
+	console.log('boxes = ' + boxes);
+	
+	if (boxes == 0) {
+		t = 0;	
+	}
+	console.log("t de t = "  + t)
+});
+
+});
 
