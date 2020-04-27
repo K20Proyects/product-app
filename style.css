@@ -108,10 +108,14 @@ nav h3 {
 			height: 80%;
 			width: 80%;	
 		}
+
 #inventoryAdd {
 	display: none;
 	transition: 0.5s;
 }
+	
+	
+	/*INVENTORY TAB*/
 
 	/*MAIN------------------------------------------------------------------------------*/
 
@@ -584,3 +588,57 @@ footer {
 		box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
 
 	}
+
+
+	/*MEDIA QUERYS TAB 1*/
+
+@media only screen and (max-width: 1400px) {
+
+	#pre-container-home {
+		height: 100px;	
+	}		
+		#pre-container-home h1 {
+			font-size: 60px;
+			padding-left: 100px;
+		}	
+		
+		#pre-container-home h2 {
+			margin-top: -88px;	
+			margin-left: 340px;
+		}
+
+	#homeApp {
+		height: 500px;	
+	}
+
+	#main-content-home {
+		height: 277px;
+		background: ;	
+	}
+	
+		#card-home {
+			margin-top: -70px;	
+		}	
+	
+	#tabsApp {
+		height: 200px;
+		margin-top: 195px;	
+	}
+
+	footer {
+		height: 100px;
+		margin-top: 0px;	
+	} 
+
+		#footer-pc-2 {
+			height: 40%;	
+		}
+
+	/*TAB 2*/
+
+	#list-product {
+		width: 100%;
+		height: 950px;	
+	}	
+
+}
